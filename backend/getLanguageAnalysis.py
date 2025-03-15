@@ -1,12 +1,11 @@
 
-import whisper_timestamped as whisper
+import subprocess
 import json
 import torch
 import re
 from gramformer import Gramformer
 from getAudioFeatures import getAudio
 import os
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 def set_seed(seed):
   torch.manual_seed(seed)
@@ -23,19 +22,26 @@ def getLang(videoPath):
         getAudio(videoPath)
         audioPath = os.path.abspath(os.path.join('uploads',os.path.splitext(os.path.basename(videoPath))[0]+'.wav'))
         print('Audio path for lang analysis:',audioPath)
-        audio = whisper.load_audio(audioPath)
         device = "cuda" if torch.cuda.is_available() else "cpu"
         print(f"Using device: {device}")
-        model = r'C:\BITSH\backend\uploads\tiny.pt'
         use_gpu = torch.cuda.is_available()
         print(use_gpu)
         gf = Gramformer(models=1, use_gpu=use_gpu)
         try:
-            result = whisper.transcribe(model, audio, language="en", detect_disfluencies=True,vad="silero")
+            process = subprocess.Popen(
+                ['python', '-c', f"import whisper_timestamped as whisper; model = whisper.load_model('tiny', device='cpu'); audio = whisper.load_audio(r'{audioPath}'); result = whisper.transcribe(model, audio, language='en', detect_disfluencies=True, vad='silero'); import json; print(json.dumps(result))"],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                stdin=subprocess.PIPE
+            )
+            output, error = process.communicate()
+            if error:
+                print(f"Error during transcription: {error.decode()}")
+            result = json.loads(output.decode())
             text = result['text']
             corrected_text = ''
             filtered_words = [contains_filler(segment["words"]) for segment in result["segments"]]
-            filtered_words = [word for word_list in filtered_words for word in word_list]  # Flatten list
+            filtered_words = [word for word_list in filtered_words for word in word_list] 
             print("Grammar Check...")
             grammar_list = []
             parsed_sentences = re.split(r'(?<=[.!?])\s+', text)
