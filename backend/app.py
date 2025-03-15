@@ -1,0 +1,49 @@
+from getAudioFeatures import getAudioFeatures
+from getPostureFeatures import getPostureFeatures
+from getEmotionFeatures import getEmotionFeatures
+from getLanguageAnalysis import getLangAnalysis
+import os
+from flask import Flask,request,jsonify
+from flask_restful import Api,Resource
+from werkzeug.utils import secure_filename
+import torch
+print(f"CUDA available: {torch.cuda.is_available()}")
+if torch.cuda.is_available():
+    print(f"CUDA device: {torch.cuda.get_device_name(0)}")
+else:
+    print("Running on CPU mode")
+app = Flask(__name__)
+api = Api(app)
+UPLOAD_FOLDER = os.path.join(os.getcwd(),'uploads')
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER,exist_ok=True)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+class Video(Resource):
+    def post(self):
+        try:
+            print(request.files)
+            if 'video' not in request.files:
+                return jsonify({'Error':'Video not received'})
+            video_file = request.files['video']
+            filename = secure_filename(video_file.filename)
+            input_video_path = os.path.join(UPLOAD_FOLDER, filename)
+            video_file.save(input_video_path)
+            print(input_video_path)
+            audio_features = getAudioFeatures(input_video_path)
+            print('Audio Features Extracted: ',audio_features)
+            # posture_features = getPostureFeatures(input_video_path)
+            # print('Posture Features Extracted: ',posture_features)
+            # emotion_features = getEmotionFeatures(input_video_path)
+            # print('Emotion Features Extracted: ',emotion_features)
+            # language_features = getLangAnalysis(input_video_path)
+            # print('Language Features Extracted',language_features)
+            return jsonify({'Success':'Features Extracted'})
+        except Exception as e:
+            print(f"Error processing request: {str(e)}")
+            return jsonify({'Error': str(e)})
+api.add_resource(Video,'/upload')
+if __name__ == '__main__':
+    app.run(debug=True,use_reloader=False)
+
+
+

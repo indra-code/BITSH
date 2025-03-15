@@ -1,0 +1,999 @@
+{
+    "video_info": {
+        "path": "C:\\BITSH\\backend\\uploads\\video4.mp4",
+        "duration_seconds": 72.88,
+        "fps": 25.0,
+        "total_frames": 1822
+    },
+    "thresholds": {
+        "max_head_tilt_degrees": 110.0,
+        "min_head_tilt_degrees": 90.0,
+        "shoulder_tilt_pixels": 20.0,
+        "spine_angle_degrees": 171.0
+    },
+    "head_tilt_issues": [
+        {
+            "start_time": 0.0,
+            "start_time_str": "0:00:00",
+            "max_tilt": 147.9436532478625,
+            "end_time": 1.84,
+            "end_time_str": "0:00:01",
+            "duration": 1.84
+        },
+        {
+            "start_time": 3.36,
+            "start_time_str": "0:00:03",
+            "max_tilt": 89.70852689187176,
+            "end_time": 3.48,
+            "end_time_str": "0:00:03",
+            "duration": 0.1200000000000001
+        },
+        {
+            "start_time": 3.92,
+            "start_time_str": "0:00:03",
+            "max_tilt": 88.75684382324667,
+            "end_time": 4.8,
+            "end_time_str": "0:00:04",
+            "duration": 0.8799999999999999
+        },
+        {
+            "start_time": 5.84,
+            "start_time_str": "0:00:05",
+            "max_tilt": 88.7642074722037,
+            "end_time": 5.92,
+            "end_time_str": "0:00:05",
+            "duration": 0.08000000000000007
+        },
+        {
+            "start_time": 6.2,
+            "start_time_str": "0:00:06",
+            "max_tilt": 88.38190546726256,
+            "end_time": 6.24,
+            "end_time_str": "0:00:06",
+            "duration": 0.040000000000000036
+        },
+        {
+            "start_time": 7.56,
+            "start_time_str": "0:00:07",
+            "max_tilt": 89.371454217957,
+            "end_time": 8.52,
+            "end_time_str": "0:00:08",
+            "duration": 0.96
+        },
+        {
+            "start_time": 8.72,
+            "start_time_str": "0:00:08",
+            "max_tilt": 87.04851452112064,
+            "end_time": 8.84,
+            "end_time_str": "0:00:08",
+            "duration": 0.11999999999999922
+        },
+        {
+            "start_time": 9.04,
+            "start_time_str": "0:00:09",
+            "max_tilt": 89.89713515627598,
+            "end_time": 10.24,
+            "end_time_str": "0:00:10",
+            "duration": 1.200000000000001
+        },
+        {
+            "start_time": 10.84,
+            "start_time_str": "0:00:10",
+            "max_tilt": 89.63035493815298,
+            "end_time": 10.96,
+            "end_time_str": "0:00:10",
+            "duration": 0.120000000000001
+        },
+        {
+            "start_time": 11.32,
+            "start_time_str": "0:00:11",
+            "max_tilt": 89.52480893279078,
+            "end_time": 11.92,
+            "end_time_str": "0:00:11",
+            "duration": 0.5999999999999996
+        },
+        {
+            "start_time": 14.12,
+            "start_time_str": "0:00:14",
+            "max_tilt": 89.46264711741877,
+            "end_time": 14.2,
+            "end_time_str": "0:00:14",
+            "duration": 0.08000000000000007
+        },
+        {
+            "start_time": 14.6,
+            "start_time_str": "0:00:14",
+            "max_tilt": 156.98731879697067,
+            "end_time": 15.4,
+            "end_time_str": "0:00:15",
+            "duration": 0.8000000000000007
+        },
+        {
+            "start_time": 15.48,
+            "start_time_str": "0:00:15",
+            "max_tilt": 88.96968669882796,
+            "end_time": 15.92,
+            "end_time_str": "0:00:15",
+            "duration": 0.4399999999999995
+        },
+        {
+            "start_time": 15.96,
+            "start_time_str": "0:00:15",
+            "max_tilt": 89.09522451319627,
+            "end_time": 16.64,
+            "end_time_str": "0:00:16",
+            "duration": 0.6799999999999997
+        },
+        {
+            "start_time": 17.44,
+            "start_time_str": "0:00:17",
+            "max_tilt": 164.98163936884933,
+            "end_time": 18.8,
+            "end_time_str": "0:00:18",
+            "duration": 1.3599999999999994
+        },
+        {
+            "start_time": 19.84,
+            "start_time_str": "0:00:19",
+            "max_tilt": 89.86357254194128,
+            "end_time": 20.12,
+            "end_time_str": "0:00:20",
+            "duration": 0.28000000000000114
+        },
+        {
+            "start_time": 20.16,
+            "start_time_str": "0:00:20",
+            "max_tilt": 89.97818672419181,
+            "end_time": 20.64,
+            "end_time_str": "0:00:20",
+            "duration": 0.4800000000000004
+        },
+        {
+            "start_time": 21.36,
+            "start_time_str": "0:00:21",
+            "max_tilt": 88.63452258683282,
+            "end_time": 22.04,
+            "end_time_str": "0:00:22",
+            "duration": 0.6799999999999997
+        },
+        {
+            "start_time": 22.16,
+            "start_time_str": "0:00:22",
+            "max_tilt": 89.444156575884,
+            "end_time": 22.32,
+            "end_time_str": "0:00:22",
+            "duration": 0.16000000000000014
+        },
+        {
+            "start_time": 26.36,
+            "start_time_str": "0:00:26",
+            "max_tilt": 89.4628531437282,
+            "end_time": 28.2,
+            "end_time_str": "0:00:28",
+            "duration": 1.8399999999999999
+        },
+        {
+            "start_time": 28.68,
+            "start_time_str": "0:00:28",
+            "max_tilt": 89.37447083861674,
+            "end_time": 30.6,
+            "end_time_str": "0:00:30",
+            "duration": 1.9200000000000017
+        },
+        {
+            "start_time": 30.72,
+            "start_time_str": "0:00:30",
+            "max_tilt": 89.79390096261588,
+            "end_time": 30.76,
+            "end_time_str": "0:00:30",
+            "duration": 0.0400000000000027
+        },
+        {
+            "start_time": 30.84,
+            "start_time_str": "0:00:30",
+            "max_tilt": 89.65917353827261,
+            "end_time": 32.92,
+            "end_time_str": "0:00:32",
+            "duration": 2.080000000000002
+        },
+        {
+            "start_time": 33.2,
+            "start_time_str": "0:00:33",
+            "max_tilt": 89.57682059327742,
+            "end_time": 33.32,
+            "end_time_str": "0:00:33",
+            "duration": 0.11999999999999744
+        },
+        {
+            "start_time": 33.84,
+            "start_time_str": "0:00:33",
+            "max_tilt": 89.38589852950301,
+            "end_time": 36.48,
+            "end_time_str": "0:00:36",
+            "duration": 2.6399999999999935
+        },
+        {
+            "start_time": 36.96,
+            "start_time_str": "0:00:36",
+            "max_tilt": 120.53698148764954,
+            "end_time": 37.0,
+            "end_time_str": "0:00:37",
+            "duration": 0.03999999999999915
+        },
+        {
+            "start_time": 37.48,
+            "start_time_str": "0:00:37",
+            "max_tilt": 178.92616549629602,
+            "end_time": 39.0,
+            "end_time_str": "0:00:39",
+            "duration": 1.5200000000000031
+        },
+        {
+            "start_time": 39.16,
+            "start_time_str": "0:00:39",
+            "max_tilt": 115.56224951037267,
+            "end_time": 39.48,
+            "end_time_str": "0:00:39",
+            "duration": 0.3200000000000003
+        },
+        {
+            "start_time": 39.64,
+            "start_time_str": "0:00:39",
+            "max_tilt": 113.3989301062653,
+            "end_time": 39.8,
+            "end_time_str": "0:00:39",
+            "duration": 0.1599999999999966
+        },
+        {
+            "start_time": 39.96,
+            "start_time_str": "0:00:39",
+            "max_tilt": 154.55095921432928,
+            "end_time": 40.72,
+            "end_time_str": "0:00:40",
+            "duration": 0.759999999999998
+        },
+        {
+            "start_time": 40.76,
+            "start_time_str": "0:00:40",
+            "max_tilt": 118.06764925664285,
+            "end_time": 40.96,
+            "end_time_str": "0:00:40",
+            "duration": 0.20000000000000284
+        },
+        {
+            "start_time": 41.04,
+            "start_time_str": "0:00:41",
+            "max_tilt": 126.68044606581748,
+            "end_time": 41.72,
+            "end_time_str": "0:00:41",
+            "duration": 0.6799999999999997
+        },
+        {
+            "start_time": 42.0,
+            "start_time_str": "0:00:42",
+            "max_tilt": 89.82644555533639,
+            "end_time": 42.16,
+            "end_time_str": "0:00:42",
+            "duration": 0.1599999999999966
+        },
+        {
+            "start_time": 42.2,
+            "start_time_str": "0:00:42",
+            "max_tilt": 89.88795506289048,
+            "end_time": 43.48,
+            "end_time_str": "0:00:43",
+            "duration": 1.279999999999994
+        },
+        {
+            "start_time": 44.8,
+            "start_time_str": "0:00:44",
+            "max_tilt": 88.7521339832104,
+            "end_time": 45.12,
+            "end_time_str": "0:00:45",
+            "duration": 0.3200000000000003
+        },
+        {
+            "start_time": 45.2,
+            "start_time_str": "0:00:45",
+            "max_tilt": 117.22396796827387,
+            "end_time": 45.44,
+            "end_time_str": "0:00:45",
+            "duration": 0.23999999999999488
+        },
+        {
+            "start_time": 46.0,
+            "start_time_str": "0:00:46",
+            "max_tilt": 177.05828673004686,
+            "end_time": 46.76,
+            "end_time_str": "0:00:46",
+            "duration": 0.759999999999998
+        },
+        {
+            "start_time": 46.84,
+            "start_time_str": "0:00:46",
+            "max_tilt": 173.65980825409017,
+            "end_time": 47.0,
+            "end_time_str": "0:00:47",
+            "duration": 0.1599999999999966
+        },
+        {
+            "start_time": 47.08,
+            "start_time_str": "0:00:47",
+            "max_tilt": 178.02506598911788,
+            "end_time": 47.76,
+            "end_time_str": "0:00:47",
+            "duration": 0.6799999999999997
+        },
+        {
+            "start_time": 47.8,
+            "start_time_str": "0:00:47",
+            "max_tilt": 148.5556750399153,
+            "end_time": 48.24,
+            "end_time_str": "0:00:48",
+            "duration": 0.44000000000000483
+        },
+        {
+            "start_time": 48.6,
+            "start_time_str": "0:00:48",
+            "max_tilt": 139.51169997309546,
+            "end_time": 50.12,
+            "end_time_str": "0:00:50",
+            "duration": 1.519999999999996
+        },
+        {
+            "start_time": 50.32,
+            "start_time_str": "0:00:50",
+            "max_tilt": 133.43326122587285,
+            "end_time": 52.32,
+            "end_time_str": "0:00:52",
+            "duration": 2.0
+        },
+        {
+            "start_time": 52.4,
+            "start_time_str": "0:00:52",
+            "max_tilt": 115.24739417385386,
+            "end_time": 52.48,
+            "end_time_str": "0:00:52",
+            "duration": 0.0799999999999983
+        },
+        {
+            "start_time": 54.12,
+            "start_time_str": "0:00:54",
+            "max_tilt": 89.58168828311177,
+            "end_time": 54.96,
+            "end_time_str": "0:00:54",
+            "duration": 0.8400000000000034
+        },
+        {
+            "start_time": 55.08,
+            "start_time_str": "0:00:55",
+            "max_tilt": 89.70627319786861,
+            "end_time": 56.04,
+            "end_time_str": "0:00:56",
+            "duration": 0.9600000000000009
+        },
+        {
+            "start_time": 56.16,
+            "start_time_str": "0:00:56",
+            "max_tilt": 89.7922337883063,
+            "end_time": 56.2,
+            "end_time_str": "0:00:56",
+            "duration": 0.04000000000000625
+        },
+        {
+            "start_time": 56.36,
+            "start_time_str": "0:00:56",
+            "max_tilt": 89.50046117731345,
+            "end_time": 56.56,
+            "end_time_str": "0:00:56",
+            "duration": 0.20000000000000284
+        },
+        {
+            "start_time": 58.2,
+            "start_time_str": "0:00:58",
+            "max_tilt": 69.51737698061972,
+            "end_time": 58.24,
+            "end_time_str": "0:00:58",
+            "duration": 0.03999999999999915
+        },
+        {
+            "start_time": 58.28,
+            "start_time_str": "0:00:58",
+            "max_tilt": 141.39439776522758,
+            "end_time": 59.72,
+            "end_time_str": "0:00:59",
+            "duration": 1.4399999999999977
+        },
+        {
+            "start_time": 59.88,
+            "start_time_str": "0:00:59",
+            "max_tilt": 89.08089521628577,
+            "end_time": 59.96,
+            "end_time_str": "0:00:59",
+            "duration": 0.0799999999999983
+        },
+        {
+            "start_time": 60.0,
+            "start_time_str": "0:01:00",
+            "max_tilt": 89.96886475275572,
+            "end_time": 61.16,
+            "end_time_str": "0:01:01",
+            "duration": 1.1599999999999966
+        },
+        {
+            "start_time": 61.56,
+            "start_time_str": "0:01:01",
+            "max_tilt": 89.60398902998948,
+            "end_time": 62.0,
+            "end_time_str": "0:01:02",
+            "duration": 0.4399999999999977
+        },
+        {
+            "start_time": 62.68,
+            "start_time_str": "0:01:02",
+            "max_tilt": 179.94880774828817,
+            "end_time": 70.04,
+            "end_time_str": "0:01:10",
+            "duration": 7.3600000000000065
+        },
+        {
+            "start_time": 70.08,
+            "start_time_str": "0:01:10",
+            "max_tilt": 166.52775491649447,
+            "end_time": 71.2,
+            "end_time_str": "0:01:11",
+            "duration": 1.1200000000000045
+        },
+        {
+            "start_time": 71.28,
+            "start_time_str": "0:01:11",
+            "max_tilt": 82.97589265452623,
+            "end_time": 71.44,
+            "end_time_str": "0:01:11",
+            "duration": 0.1599999999999966
+        },
+        {
+            "start_time": 71.56,
+            "start_time_str": "0:01:11",
+            "max_tilt": 168.8273437640837,
+            "end_time": 72.88,
+            "end_time_str": "0:01:12",
+            "duration": 1.3199999999999932
+        }
+    ],
+    "shoulder_tilt_issues": [
+        {
+            "start_time": 0.08,
+            "start_time_str": "0:00:00",
+            "max_tilt": 33.0,
+            "end_time": 1.44,
+            "end_time_str": "0:00:01",
+            "duration": 1.3599999999999999
+        },
+        {
+            "start_time": 5.04,
+            "start_time_str": "0:00:05",
+            "max_tilt": 30.0,
+            "end_time": 5.76,
+            "end_time_str": "0:00:05",
+            "duration": 0.7199999999999998
+        },
+        {
+            "start_time": 10.64,
+            "start_time_str": "0:00:10",
+            "max_tilt": 33.0,
+            "end_time": 12.0,
+            "end_time_str": "0:00:12",
+            "duration": 1.3599999999999994
+        },
+        {
+            "start_time": 18.68,
+            "start_time_str": "0:00:18",
+            "max_tilt": 38.0,
+            "end_time": 19.08,
+            "end_time_str": "0:00:19",
+            "duration": 0.3999999999999986
+        },
+        {
+            "start_time": 19.28,
+            "start_time_str": "0:00:19",
+            "max_tilt": 36.0,
+            "end_time": 21.4,
+            "end_time_str": "0:00:21",
+            "duration": 2.1199999999999974
+        },
+        {
+            "start_time": 21.6,
+            "start_time_str": "0:00:21",
+            "max_tilt": 21.0,
+            "end_time": 21.64,
+            "end_time_str": "0:00:21",
+            "duration": 0.03999999999999915
+        },
+        {
+            "start_time": 21.68,
+            "start_time_str": "0:00:21",
+            "max_tilt": 21.0,
+            "end_time": 21.72,
+            "end_time_str": "0:00:21",
+            "duration": 0.03999999999999915
+        },
+        {
+            "start_time": 33.28,
+            "start_time_str": "0:00:33",
+            "max_tilt": 23.0,
+            "end_time": 33.56,
+            "end_time_str": "0:00:33",
+            "duration": 0.28000000000000114
+        },
+        {
+            "start_time": 33.88,
+            "start_time_str": "0:00:33",
+            "max_tilt": 25.0,
+            "end_time": 34.2,
+            "end_time_str": "0:00:34",
+            "duration": 0.3200000000000003
+        },
+        {
+            "start_time": 37.0,
+            "start_time_str": "0:00:37",
+            "max_tilt": 25.0,
+            "end_time": 37.04,
+            "end_time_str": "0:00:37",
+            "duration": 0.03999999999999915
+        },
+        {
+            "start_time": 37.64,
+            "start_time_str": "0:00:37",
+            "max_tilt": 34.0,
+            "end_time": 37.8,
+            "end_time_str": "0:00:37",
+            "duration": 0.1599999999999966
+        },
+        {
+            "start_time": 37.84,
+            "start_time_str": "0:00:37",
+            "max_tilt": 52.0,
+            "end_time": 37.96,
+            "end_time_str": "0:00:37",
+            "duration": 0.11999999999999744
+        },
+        {
+            "start_time": 38.24,
+            "start_time_str": "0:00:38",
+            "max_tilt": 25.0,
+            "end_time": 38.36,
+            "end_time_str": "0:00:38",
+            "duration": 0.11999999999999744
+        },
+        {
+            "start_time": 39.48,
+            "start_time_str": "0:00:39",
+            "max_tilt": 60.0,
+            "end_time": 40.68,
+            "end_time_str": "0:00:40",
+            "duration": 1.2000000000000028
+        },
+        {
+            "start_time": 40.72,
+            "start_time_str": "0:00:40",
+            "max_tilt": 68.0,
+            "end_time": 43.84,
+            "end_time_str": "0:00:43",
+            "duration": 3.1200000000000045
+        },
+        {
+            "start_time": 44.92,
+            "start_time_str": "0:00:44",
+            "max_tilt": 54.0,
+            "end_time": 44.96,
+            "end_time_str": "0:00:44",
+            "duration": 0.03999999999999915
+        },
+        {
+            "start_time": 45.0,
+            "start_time_str": "0:00:45",
+            "max_tilt": 78.0,
+            "end_time": 45.68,
+            "end_time_str": "0:00:45",
+            "duration": 0.6799999999999997
+        },
+        {
+            "start_time": 46.04,
+            "start_time_str": "0:00:46",
+            "max_tilt": 53.0,
+            "end_time": 46.2,
+            "end_time_str": "0:00:46",
+            "duration": 0.1600000000000037
+        },
+        {
+            "start_time": 46.52,
+            "start_time_str": "0:00:46",
+            "max_tilt": 64.0,
+            "end_time": 46.68,
+            "end_time_str": "0:00:46",
+            "duration": 0.1599999999999966
+        },
+        {
+            "start_time": 47.48,
+            "start_time_str": "0:00:47",
+            "max_tilt": 28.0,
+            "end_time": 47.52,
+            "end_time_str": "0:00:47",
+            "duration": 0.04000000000000625
+        },
+        {
+            "start_time": 47.76,
+            "start_time_str": "0:00:47",
+            "max_tilt": 22.0,
+            "end_time": 47.8,
+            "end_time_str": "0:00:47",
+            "duration": 0.03999999999999915
+        },
+        {
+            "start_time": 48.68,
+            "start_time_str": "0:00:48",
+            "max_tilt": 26.0,
+            "end_time": 48.76,
+            "end_time_str": "0:00:48",
+            "duration": 0.0799999999999983
+        },
+        {
+            "start_time": 49.92,
+            "start_time_str": "0:00:49",
+            "max_tilt": 77.0,
+            "end_time": 51.88,
+            "end_time_str": "0:00:51",
+            "duration": 1.9600000000000009
+        },
+        {
+            "start_time": 58.32,
+            "start_time_str": "0:00:58",
+            "max_tilt": 22.0,
+            "end_time": 58.36,
+            "end_time_str": "0:00:58",
+            "duration": 0.03999999999999915
+        },
+        {
+            "start_time": 58.4,
+            "start_time_str": "0:00:58",
+            "max_tilt": 22.0,
+            "end_time": 58.44,
+            "end_time_str": "0:00:58",
+            "duration": 0.03999999999999915
+        },
+        {
+            "start_time": 58.6,
+            "start_time_str": "0:00:58",
+            "max_tilt": 25.0,
+            "end_time": 59.72,
+            "end_time_str": "0:00:59",
+            "duration": 1.1199999999999974
+        },
+        {
+            "start_time": 62.56,
+            "start_time_str": "0:01:02",
+            "max_tilt": 23.0,
+            "end_time": 62.6,
+            "end_time_str": "0:01:02",
+            "duration": 0.03999999999999915
+        },
+        {
+            "start_time": 62.64,
+            "start_time_str": "0:01:02",
+            "max_tilt": 28.0,
+            "end_time": 62.84,
+            "end_time_str": "0:01:02",
+            "duration": 0.20000000000000284
+        },
+        {
+            "start_time": 64.36,
+            "start_time_str": "0:01:04",
+            "max_tilt": 30.0,
+            "end_time": 64.48,
+            "end_time_str": "0:01:04",
+            "duration": 0.12000000000000455
+        },
+        {
+            "start_time": 64.52,
+            "start_time_str": "0:01:04",
+            "max_tilt": 48.0,
+            "end_time": 64.6,
+            "end_time_str": "0:01:04",
+            "duration": 0.0799999999999983
+        },
+        {
+            "start_time": 64.68,
+            "start_time_str": "0:01:04",
+            "max_tilt": 49.0,
+            "end_time": 64.84,
+            "end_time_str": "0:01:04",
+            "duration": 0.1599999999999966
+        },
+        {
+            "start_time": 66.4,
+            "start_time_str": "0:01:06",
+            "max_tilt": 26.0,
+            "end_time": 66.44,
+            "end_time_str": "0:01:06",
+            "duration": 0.03999999999999204
+        },
+        {
+            "start_time": 66.68,
+            "start_time_str": "0:01:06",
+            "max_tilt": 28.0,
+            "end_time": 66.88,
+            "end_time_str": "0:01:06",
+            "duration": 0.19999999999998863
+        },
+        {
+            "start_time": 67.12,
+            "start_time_str": "0:01:07",
+            "max_tilt": 32.0,
+            "end_time": 67.2,
+            "end_time_str": "0:01:07",
+            "duration": 0.0799999999999983
+        },
+        {
+            "start_time": 67.44,
+            "start_time_str": "0:01:07",
+            "max_tilt": 31.0,
+            "end_time": 67.92,
+            "end_time_str": "0:01:07",
+            "duration": 0.480000000000004
+        },
+        {
+            "start_time": 68.12,
+            "start_time_str": "0:01:08",
+            "max_tilt": 49.0,
+            "end_time": 68.6,
+            "end_time_str": "0:01:08",
+            "duration": 0.47999999999998977
+        },
+        {
+            "start_time": 68.8,
+            "start_time_str": "0:01:08",
+            "max_tilt": 26.0,
+            "end_time": 68.88,
+            "end_time_str": "0:01:08",
+            "duration": 0.0799999999999983
+        },
+        {
+            "start_time": 69.24,
+            "start_time_str": "0:01:09",
+            "max_tilt": 69.0,
+            "end_time": 69.28,
+            "end_time_str": "0:01:09",
+            "duration": 0.04000000000000625
+        },
+        {
+            "start_time": 69.32,
+            "start_time_str": "0:01:09",
+            "max_tilt": 59.0,
+            "end_time": 70.04,
+            "end_time_str": "0:01:10",
+            "duration": 0.7200000000000131
+        },
+        {
+            "start_time": 70.68,
+            "start_time_str": "0:01:10",
+            "max_tilt": 61.0,
+            "end_time": 71.24,
+            "end_time_str": "0:01:11",
+            "duration": 0.5599999999999881
+        },
+        {
+            "start_time": 71.44,
+            "start_time_str": "0:01:11",
+            "max_tilt": 40.0,
+            "end_time": 71.52,
+            "end_time_str": "0:01:11",
+            "duration": 0.0799999999999983
+        },
+        {
+            "start_time": 71.56,
+            "start_time_str": "0:01:11",
+            "max_tilt": 21.0,
+            "end_time": 71.6,
+            "end_time_str": "0:01:11",
+            "duration": 0.03999999999999204
+        }
+    ],
+    "spine_angle_issues": [
+        {
+            "start_time": 18.48,
+            "start_time_str": "0:00:18",
+            "min_angle": 95.78239232236405,
+            "end_time": 18.68,
+            "end_time_str": "0:00:18",
+            "duration": 0.1999999999999993
+        },
+        {
+            "start_time": 37.48,
+            "start_time_str": "0:00:37",
+            "min_angle": 169.24512229904974,
+            "end_time": 37.84,
+            "end_time_str": "0:00:37",
+            "duration": 0.36000000000000654
+        },
+        {
+            "start_time": 38.28,
+            "start_time_str": "0:00:38",
+            "min_angle": 168.32628968711523,
+            "end_time": 38.88,
+            "end_time_str": "0:00:38",
+            "duration": 0.6000000000000014
+        },
+        {
+            "start_time": 39.96,
+            "start_time_str": "0:00:39",
+            "min_angle": 88.46222761530255,
+            "end_time": 40.68,
+            "end_time_str": "0:00:40",
+            "duration": 0.7199999999999989
+        },
+        {
+            "start_time": 41.84,
+            "start_time_str": "0:00:41",
+            "min_angle": 162.50900268775737,
+            "end_time": 43.76,
+            "end_time_str": "0:00:43",
+            "duration": 1.9199999999999946
+        },
+        {
+            "start_time": 46.12,
+            "start_time_str": "0:00:46",
+            "min_angle": 17.10272896905238,
+            "end_time": 48.0,
+            "end_time_str": "0:00:48",
+            "duration": 1.8800000000000026
+        },
+        {
+            "start_time": 51.64,
+            "start_time_str": "0:00:51",
+            "min_angle": 110.67442476087389,
+            "end_time": 53.64,
+            "end_time_str": "0:00:53",
+            "duration": 2.0
+        },
+        {
+            "start_time": 63.68,
+            "start_time_str": "0:01:03",
+            "min_angle": 51.952957468173935,
+            "end_time": 64.48,
+            "end_time_str": "0:01:04",
+            "duration": 0.8000000000000043
+        },
+        {
+            "start_time": 68.28,
+            "start_time_str": "0:01:08",
+            "min_angle": 170.5066063310761,
+            "end_time": 68.36,
+            "end_time_str": "0:01:08",
+            "duration": 0.0799999999999983
+        },
+        {
+            "start_time": 68.4,
+            "start_time_str": "0:01:08",
+            "min_angle": 170.98929045318238,
+            "end_time": 68.44,
+            "end_time_str": "0:01:08",
+            "duration": 0.03999999999999204
+        },
+        {
+            "start_time": 69.24,
+            "start_time_str": "0:01:09",
+            "min_angle": 6.255524200067498,
+            "end_time": 70.68,
+            "end_time_str": "0:01:10",
+            "duration": 1.440000000000012
+        }
+    ],
+    "gesture_analysis": {
+        "segments": [
+            {
+                "start_time": 0.56,
+                "start_time_str": "0:00:00",
+                "quality": "good",
+                "avg_movement": 19.854818139256945,
+                "dominant_hand": "right",
+                "end_time": 5.16,
+                "end_time_str": "0:00:05",
+                "duration": 4.6
+            },
+            {
+                "start_time": 6.48,
+                "start_time_str": "0:00:06",
+                "quality": "good",
+                "avg_movement": 23.331443573903215,
+                "dominant_hand": "both",
+                "end_time": 15.28,
+                "end_time_str": "0:00:15",
+                "duration": 8.799999999999999
+            },
+            {
+                "start_time": 16.44,
+                "start_time_str": "0:00:16",
+                "quality": "good",
+                "avg_movement": 25.305696751210537,
+                "dominant_hand": "both",
+                "end_time": 21.48,
+                "end_time_str": "0:00:21",
+                "duration": 5.039999999999999
+            },
+            {
+                "start_time": 22.04,
+                "start_time_str": "0:00:22",
+                "quality": "poor",
+                "avg_movement": 6.924160345878176,
+                "dominant_hand": "left",
+                "end_time": 25.48,
+                "end_time_str": "0:00:25",
+                "duration": 3.4400000000000013
+            },
+            {
+                "start_time": 25.8,
+                "start_time_str": "0:00:25",
+                "quality": "good",
+                "avg_movement": 22.151747118048167,
+                "dominant_hand": "left",
+                "end_time": 30.0,
+                "end_time_str": "0:00:30",
+                "duration": 4.199999999999999
+            },
+            {
+                "start_time": 48.04,
+                "start_time_str": "0:00:48",
+                "quality": "good",
+                "avg_movement": 25.719423075676968,
+                "dominant_hand": "right",
+                "end_time": 51.8,
+                "end_time_str": "0:00:51",
+                "duration": 3.759999999999998
+            },
+            {
+                "start_time": 53.88,
+                "start_time_str": "0:00:53",
+                "quality": "good",
+                "avg_movement": 24.716114493775788,
+                "dominant_hand": "right",
+                "end_time": 63.72,
+                "end_time_str": "0:01:03",
+                "duration": 9.839999999999996
+            },
+            {
+                "start_time": 63.72,
+                "start_time_str": "0:01:03",
+                "quality": "poor",
+                "avg_movement": 116.43778006128366,
+                "dominant_hand": "right",
+                "end_time": 67.44,
+                "end_time_str": "0:01:07",
+                "duration": 3.719999999999999
+            },
+            {
+                "start_time": 67.44,
+                "start_time_str": "0:01:07",
+                "quality": "none",
+                "avg_movement": 0.0,
+                "dominant_hand": "right",
+                "end_time": 72.88,
+                "end_time_str": "0:01:12",
+                "duration": 5.439999999999998
+            }
+        ],
+        "overall_assessment": {
+            "frames_analyzed": 1650,
+            "percentage_good_gestures": 69.63636363636364,
+            "percentage_poor_gestures": 23.757575757575758,
+            "percentage_no_gestures": 6.6060606060606055,
+            "assessment": "Excellent use of hand gestures throughout the presentation. You predominantly use your right hand for gesturing. Recommendations: "
+        },
+        "hand_dominance": {
+            "left_percentage": 14.372346876895087,
+            "right_percentage": 50.57610673135233,
+            "both_percentage": 35.051546391752574,
+            "primary_hand": "right"
+        }
+    }
+}

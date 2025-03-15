@@ -1,0 +1,31 @@
+{
+    "video_info": {
+        "path": "C:\\BITSH\\backend\\uploads\\video4.mp4",
+        "duration_seconds": 72.88,
+        "fps": 25.0,
+        "total_frames": 1822
+    },
+    "thresholds": {
+        "max_head_tilt_degrees": 110.0,
+        "min_head_tilt_degrees": 90.0,
+        "shoulder_tilt_pixels": 20.0,
+        "spine_angle_degrees": 171.0
+    },
+    "frame_statistics": {
+        "total_frames_analyzed": 1650,
+        "head_tilt_up_percentage": 23.757575757575758,
+        "head_tilt_down_percentage": 36.484848484848484,
+        "shoulder_tilt_percentage": 26.484848484848484,
+        "spine_angle_percentage": 11.272727272727273
+    },
+    "gesture_statistics": {
+        "good_gestures_percentage": 69.63636363636364,
+        "poor_gestures_percentage": 23.757575757575758,
+        "no_gestures_percentage": 6.6060606060606055
+    },
+    "hand_dominance": {
+        "left_hand_percentage": 14.372346876895087,
+        "right_hand_percentage": 50.57610673135233,
+        "both_hands_percentage": 35.051546391752574
+    }
+}
