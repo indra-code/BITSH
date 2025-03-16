@@ -19,7 +19,11 @@ def contains_filler(word_list):
 
 def getLang(videoPath):
     try:
-        getAudio(videoPath)
+        wav_path = os.path.join('uploads', os.path.splitext(os.path.basename(videoPath))[0] + '.wav')
+        print("Checking if file exists:", wav_path)
+        if not os.path.exists(wav_path):
+            print("File does not exist, running getAudio...")
+            getAudio(videoPath)
         audioPath = os.path.abspath(os.path.join('uploads',os.path.splitext(os.path.basename(videoPath))[0]+'.wav'))
         print('Audio path for lang analysis:',audioPath)
         device = "cuda" if torch.cuda.is_available() else "cpu"

@@ -7,6 +7,7 @@ from flask import Flask,request,jsonify
 from flask_restful import Api,Resource
 from werkzeug.utils import secure_filename
 import torch
+import subprocess
 print(f"CUDA available: {torch.cuda.is_available()}")
 if torch.cuda.is_available():
     print(f"CUDA device: {torch.cuda.get_device_name(0)}")
@@ -21,6 +22,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 class Video(Resource):
     def post(self):
         try:
+            subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
             print(request.files)
             if 'video' not in request.files:
                 return jsonify({'Error':'Video not received'})
@@ -31,19 +33,19 @@ class Video(Resource):
             print(input_video_path)
             audio_features = getAudioFeatures(input_video_path)
             print('Audio Features Extracted: ',audio_features)
-            # posture_features = getPostureFeatures(input_video_path)
-            # print('Posture Features Extracted: ',posture_features)
-            # emotion_features = getEmotionFeatures(input_video_path)
-            # print('Emotion Features Extracted: ',emotion_features)
-            # language_features = getLangAnalysis(input_video_path)
-            # print('Language Features Extracted',language_features)
+            posture_features = getPostureFeatures(input_video_path)
+            print('Posture Features Extracted: ',posture_features)
+            emotion_features = getEmotionFeatures(input_video_path)
+            print('Emotion Features Extracted: ',emotion_features)
+            language_features = getLangAnalysis(input_video_path)
+            print('Language Features Extracted',language_features)
             return jsonify({'Success':'Features Extracted'})
         except Exception as e:
             print(f"Error processing request: {str(e)}")
             return jsonify({'Error': str(e)})
 api.add_resource(Video,'/upload')
 if __name__ == '__main__':
-    app.run(debug=True,use_reloader=False)
+    app.run(debug=True,use_reloader=False,host="0.0.0.0", port=5000)
 
 
 

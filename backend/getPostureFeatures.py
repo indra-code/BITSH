@@ -696,8 +696,6 @@ def analyze_video(video_path, output_path, max_head_threshold=110, min_head_thre
                     "both_hands_percentage": float((frames_with_both_hands / active_gesture_frames) * 100)
                 }
         # Save precise summary to JSON
-        with open(precise_output_path, 'w') as f:
-            json.dump(precise_summary, f, indent=4, cls=NumpyEncoder)
         
         print(f"Precise summary saved to {precise_output_path}")
     
@@ -707,8 +705,6 @@ def analyze_video(video_path, output_path, max_head_threshold=110, min_head_thre
         cv2.destroyAllWindows()
     
     # Save to JSON using the custom encoder
-    with open(output_path, 'w') as f:
-        json.dump(analysis_results, f, indent=4, cls=NumpyEncoder)
     
     print(f"\nAnalysis complete! Results saved to {output_path}")
     

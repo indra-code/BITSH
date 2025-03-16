@@ -24,7 +24,7 @@ def getTimes(audiofile):
         '-i',
         audiofile,
         '-af',
-        'silencedetect=n=-40dB:d=0.5',
+        'silencedetect=n=-20dB:d=1.5',
         '-f',
         'null',
         '-'
@@ -39,7 +39,7 @@ def getTimes(audiofile):
     for i in range(len(start)):
         ls.append([start[i],end[i],durations[i]])
     print(ls)
-    return ls
+    return durations
 def getNISQAScore(audioFile):
     print(audioFile)
     command = [
@@ -111,6 +111,7 @@ def getAudioFeatures(videoPath):
     number_of_pauses = getTimes(os.path.join(folderPath,os.path.splitext(os.path.basename(videoPath))[0]+'.wav'))
     audio_features['nisqa_score'] = float(nisqa_score[0])
     audio_features['number_of_long_pauses'] = len(number_of_pauses)
+    audio_features['durations_of_pauses'] = sorted(number_of_pauses,reverse=True)
     print(audio_features)
     audio_features_json = json.dumps(audio_features)
     # with open('audio_features.json','w') as f:
