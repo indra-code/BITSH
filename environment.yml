@@ -239,4 +239,5 @@ dependencies:
       - whisper-timestamped==1.15.8
       - wrapt==1.17.2
       - zipp==3.21.0
+      - "--editable=git+https://github.com/PrithivirajDamodaran/Gramformer.git#egg=gramformer"
 prefix: C:\Users\INDRANEEL KVS\.conda\envs\venv
