@@ -53,7 +53,7 @@ def getNISQAScore(audioFile):
     return output
 def convert_audio_file(input_file, path,temp_name):
     print("entered conversion function")
-    y, s = librosa.load(f"{path}\{input_file}", sr=44100)
+    y, s = librosa.load(f"{path}/{input_file}", sr=44100)
 
     if len(y) % 2 == 1:
         y = y[:-1]
@@ -61,7 +61,8 @@ def convert_audio_file(input_file, path,temp_name):
     y = y * 32767 / max(abs(y))
     y = y.astype('int16')
 
-    sf.write(f"{path}\{temp_name}", y, s, "PCM_24")
+    sf.write(f"{path}/{temp_name}", y, s, "PCM_24")
+
 def analyze_audio_file(audio_file,path,temp_name):
     print("entered analyze")
     convert_audio_file(audio_file,path,temp_name)
