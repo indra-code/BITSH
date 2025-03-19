@@ -1,19 +1,18 @@
 # Note: Replace **<YOUR_APPLICATION_TOKEN>** with your actual Application token
 
-import argparse
-import json
-from argparse import RawTextHelpFormatter
-import requests
-from typing import Optional
-import warnings
 
+import json
+import requests
+from dotenv import load_dotenv
+import os
+load_dotenv()
 question = "What is the difference between compilation and interpretation?Also explain the use of branching in version control."
 user_answer = "compilation means running the code and interpreting means translating the code into another language."
 
 BASE_API_URL = "https://api.langflow.astra.datastax.com"
 LANGFLOW_ID = "707bfd4b-3c7e-4b53-b324-429a72a43334"
 FLOW_ID = "e6c93c89-0d28-4a98-8eaa-0e52ee3195ce"
-APPLICATION_TOKEN = "AstraCS:ihgmMwHBUQJhySCzRCykrdQJ:0eec6d7356813d4fe621596273f7e744b5ec172f26e65d3c2972e8063cbf204b"
+APPLICATION_TOKEN = os.getenv('LANGFLOW_API_KEY')
 ENDPOINT = "question_answer" 
 TWEAKS = {
   "TextInput-LwCyh": {

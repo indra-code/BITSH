@@ -1,5 +1,7 @@
 import json
 import requests
+from dotenv import load_dotenv
+import os
 # features = '''
 # {
 #     "Audio Features": "{\"gender\": \"female\", \"pronunciation_posteriori_probability_score_percentage\": 90.09, \"number_of_syllables\": 117.0, \"rate_of_speech(syllables/second)\": 3.0, \"articulation_rate(syllables/second)\": 5.0, \"speaking_duration(seconds)\": 23.3, \"original_duration(seconds)\": 35.9, \"balance\": 0.6, \"f0_mean(Hertz)\": 196.52, \"f0_std(Hertz)\": 29.51, \"f0_median(Hertz)\": 193.5, \"f0_min(Hertz)\": 80.0, \"f0_max(Hertz)\": 384.0, \"f0_quantile25(Hertz)\": 25.0, \"f0_quantile75(Hertz)\": 179.0, \"nisqa_score\": 2.809978, \"number_of_long_pauses\": 1, \"durations_of_pauses\": [\"19.0241\"]}",
@@ -41,11 +43,11 @@ import requests
 # }
 # '''
 # environment= "An online interview with a company CEO"
-
+load_dotenv()
 BASE_API_URL = "https://api.langflow.astra.datastax.com"
 LANGFLOW_ID = "707bfd4b-3c7e-4b53-b324-429a72a43334"
 FLOW_ID = "77024b89-7834-4b18-a091-5db5f808b49f"
-APPLICATION_TOKEN = "AstraCS:ihgmMwHBUQJhySCzRCykrdQJ:0eec6d7356813d4fe621596273f7e744b5ec172f26e65d3c2972e8063cbf204b"
+APPLICATION_TOKEN = os.getenv('LANGFLOW_API_KEY')
 ENDPOINT = "report" 
 
 def run_flow(message: str,features,environment,
