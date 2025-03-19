@@ -53,7 +53,7 @@ def getNISQAScore(audioFile):
     return output
 def convert_audio_file(input_file, path,temp_name):
     print("entered conversion function")
-    y, s = librosa.load(f"{path}\{input_file}", sr=44100)
+    y, s = librosa.load(f"{path}/{input_file}", sr=44100)
 
     if len(y) % 2 == 1:
         y = y[:-1]
@@ -61,7 +61,7 @@ def convert_audio_file(input_file, path,temp_name):
     y = y * 32767 / max(abs(y))
     y = y.astype('int16')
 
-    sf.write(f"{path}\{temp_name}", y, s, "PCM_24")
+    sf.write(f"{path}/{temp_name}", y, s, "PCM_24")
 def analyze_audio_file(audio_file,path,temp_name):
     print("entered analyze")
     convert_audio_file(audio_file,path,temp_name)
@@ -71,7 +71,7 @@ def analyze_audio_file(audio_file,path,temp_name):
         mysp.mysppron(temp_name[:-4], path)
         mysp.myspgend(temp_name[:-4], path)
         captured_output = buf.getvalue()
-        os.remove(fr"{path}/{temp_name}")
+        os.remove(f"{path}/{temp_name}")
         gender = re.findall('a\s*(Male|female)',captured_output)
         gender = gender[0] if gender else 'Unknown'
         p_score = re.findall('Pronunciation_posteriori_probability_score_percentage= :\s*([\d.]+)',captured_output)
