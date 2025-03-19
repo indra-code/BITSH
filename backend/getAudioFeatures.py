@@ -62,6 +62,7 @@ def convert_audio_file(input_file, path,temp_name):
     y = y.astype('int16')
 
     sf.write(f"{path}/{temp_name}", y, s, "PCM_24")
+
 def analyze_audio_file(audio_file,path,temp_name):
     print("entered analyze")
     convert_audio_file(audio_file,path,temp_name)

@@ -180,3 +180,8 @@ dependencies:
       - whisper-timestamped==1.15.8
       - wrapt==1.17.2
       - zipp==3.21.0
+<<<<<<< HEAD
+=======
+      - "--editable=git+https://github.com/PrithivirajDamodaran/Gramformer.git#egg=gramformer"
+prefix: C:\Users\INDRANEEL KVS\.conda\envs\venv
+>>>>>>> 39f0787275ce87a68cc1393efe5c0e1956ea0945
