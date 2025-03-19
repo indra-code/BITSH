@@ -45,8 +45,8 @@ import os
 # environment= "An online interview with a company CEO"
 load_dotenv()
 BASE_API_URL = "https://api.langflow.astra.datastax.com"
-LANGFLOW_ID = "707bfd4b-3c7e-4b53-b324-429a72a43334"
-FLOW_ID = "77024b89-7834-4b18-a091-5db5f808b49f"
+LANGFLOW_ID = os.getenv('LANGFLOW_ID')
+FLOW_ID = os.getenv('FLOW_ID')
 APPLICATION_TOKEN = os.getenv('LANGFLOW_API_KEY')
 ENDPOINT = "report" 
 

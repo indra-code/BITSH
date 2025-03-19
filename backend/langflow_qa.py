@@ -10,8 +10,8 @@ question = "What is the difference between compilation and interpretation?Also e
 user_answer = "compilation means running the code and interpreting means translating the code into another language."
 
 BASE_API_URL = "https://api.langflow.astra.datastax.com"
-LANGFLOW_ID = "707bfd4b-3c7e-4b53-b324-429a72a43334"
-FLOW_ID = "e6c93c89-0d28-4a98-8eaa-0e52ee3195ce"
+LANGFLOW_ID = os.getenv('LANGFLOW_ID')
+FLOW_ID = os.getenv('FLOW_ID')
 APPLICATION_TOKEN = os.getenv('LANGFLOW_API_KEY')
 ENDPOINT = "question_answer" 
 TWEAKS = {
