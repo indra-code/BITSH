@@ -8,6 +8,8 @@ from flask_restful import Api,Resource
 from werkzeug.utils import secure_filename
 import torch
 import subprocess
+from langflow_report import run_flow
+import json
 print(f"CUDA available: {torch.cuda.is_available()}")
 if torch.cuda.is_available():
     print(f"CUDA device: {torch.cuda.get_device_name(0)}")
@@ -39,7 +41,16 @@ class Video(Resource):
             print('Emotion Features Extracted: ',emotion_features)
             language_features = getLangAnalysis(input_video_path)
             print('Language Features Extracted',language_features)
-            return jsonify({'Success':'Features Extracted'})
+            features_output = {
+                "Audio Features": audio_features,
+                "Posture Features": posture_features,
+                "Emotion Features": emotion_features,
+                "Language Features": language_features
+            }
+            features_output = json.dumps(features_output)
+            env = "An online interview with a company CEO"
+            report = run_flow(message='Use the features provided in the input to make your analysis',features=features_output,environment=env)
+            return jsonify(report)
         except Exception as e:
             print(f"Error processing request: {str(e)}")
             return jsonify({'Error': str(e)})

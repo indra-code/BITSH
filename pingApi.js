@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const uploadVideo = async () => {
     try {
-        const videoPath = 'C:\\BITSH\\audio\\video6.mp4'; // Change this to your actual video file path
+        const videoPath = 'C:\\Users\\INDRANEEL KVS\\skillscraft\\videoplayback (1).mp4'; // Change this to your actual video file path
         const formData = new FormData();
         formData.append('video', fs.createReadStream(videoPath));
         
