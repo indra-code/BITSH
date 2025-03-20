@@ -97,11 +97,31 @@ class QA(Resource):
         except Exception as e:
             print(f"Error processing qa response")
             return jsonify({'Error':str(e)})
+
+class GetLang(Resource):
+    def post(self):
+        try:
+            if 'video' not in request.files:
+                return jsonify({'Error':'Video not received'})
+            video_file = request.files['video']
+            filename = secure_filename(video_file.filename)
+            input_video_path = os.path.join(UPLOAD_FOLDER, filename)
+            video_file.save(input_video_path)
+            print(input_video_path)
+            response = getLangAnalysis(input_video_path)
+            return jsonify(response['original_text'])
+        except Exception as e:
+            print(f"Error processing lang analysis")
+            return jsonify({'Error':str(e)})
+
+
+
 api.add_resource(Video,'/upload')
 api.add_resource(TTS, '/tts') 
 api.add_resource(QA,'/qa')
+api.add_resource(GetLang,'/getlang')
 if __name__ == '__main__':
-    app.run(debug=True,use_reloader=False,host="0.0.0.0", port=5001)
+    app.run(debug=True,use_reloader=False,host="0.0.0.0", port=5000)
 
 
 
