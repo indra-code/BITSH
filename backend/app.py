@@ -3,7 +3,7 @@ from getPostureFeatures import getPostureFeatures
 from getEmotionFeatures import getEmotionFeatures
 from getLanguageAnalysis import getLangAnalysis
 import os
-from flask import Flask,request,jsonify
+from flask import Flask,request,jsonify,send_file
 from flask_restful import Api,Resource
 from werkzeug.utils import secure_filename
 import torch
@@ -54,9 +54,36 @@ class Video(Resource):
         except Exception as e:
             print(f"Error processing request: {str(e)}")
             return jsonify({'Error': str(e)})
+
+class TTS(Resource):
+    def post(self):
+        try:
+            if 'report' not in request.form:
+                return jsonify({'Error':'Report not received'})
+            
+            report_text = request.form['report']
+            
+            import sys
+            import os
+            
+            current_dir = os.getcwd()
+            if current_dir not in sys.path:
+                sys.path.append(current_dir)
+            
+            from getTTS import get_audio
+            
+            audio_path = get_audio(report_text)
+            
+            return send_file(audio_path, as_attachment=True,download_name="speech.wav", mimetype="audio/wav")
+        except Exception as e:
+            import traceback
+            error_details = traceback.format_exc()
+            print(f"Error processing TTS request: {str(e)}")
+            print(f"Detailed error: {error_details}")
+            return jsonify({'Error': str(e), 'Details': error_details})
+        
+           
 api.add_resource(Video,'/upload')
+api.add_resource(TTS, '/tts') 
 if __name__ == '__main__':
     app.run(debug=True,use_reloader=False,host="0.0.0.0", port=5000)
-
-
-

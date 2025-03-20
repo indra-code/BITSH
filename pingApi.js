@@ -15,6 +15,13 @@ const uploadVideo = async () => {
         });
         
         console.log('Response:', response.data);
+        const fdata = new FormData();
+        fdata.append('report',response.data);
+        await axios.post('http://127.0.0.1:5000/tts',fdata,{
+            headers: {
+                ...formData.getHeaders()
+            }  
+        });
     } catch (error) {
         console.error('Error uploading video:', error);
     }
