@@ -5,6 +5,7 @@ from getLanguageAnalysis import getLangAnalysis
 import os
 from flask import Flask,request,jsonify
 from flask_restful import Api,Resource
+from flask_cors import CORS
 from werkzeug.utils import secure_filename
 import torch
 import subprocess
@@ -16,6 +17,7 @@ if torch.cuda.is_available():
 else:
     print("Running on CPU mode")
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": ["http://localhost:*"]}})
 api = Api(app)
 UPLOAD_FOLDER = os.path.join(os.getcwd(),'uploads')
 if not os.path.exists(UPLOAD_FOLDER):

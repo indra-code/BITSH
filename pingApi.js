@@ -19,7 +19,13 @@ const uploadVideo = async () => {
       }
     );
 
-    console.log("Response:", response.data);
+    console.log("\n=== Response Data ===");
+    if (Array.isArray(response.data)) {
+      console.table(response.data);
+    } else {
+      console.log(JSON.stringify(response.data, null, 2));
+    }
+    console.log("==================\n");
   } catch (error) {
     console.error("Error uploading video:", error);
   }
