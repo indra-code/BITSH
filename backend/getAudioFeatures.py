@@ -72,7 +72,7 @@ def analyze_audio_file(audio_file,path,temp_name):
         mysp.mysppron(temp_name[:-4], path)
         mysp.myspgend(temp_name[:-4], path)
         captured_output = buf.getvalue()
-        os.remove(fr"{path}/{temp_name}")
+        os.remove(f"{path}/{temp_name}")
         gender = re.findall('a\s*(Male|female)',captured_output)
         gender = gender[0] if gender else 'Unknown'
         p_score = re.findall('Pronunciation_posteriori_probability_score_percentage= :\s*([\d.]+)',captured_output)

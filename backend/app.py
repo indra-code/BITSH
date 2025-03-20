@@ -5,6 +5,7 @@ from getLanguageAnalysis import getLangAnalysis
 import os
 from flask import Flask,request,jsonify,send_file
 from flask_restful import Api,Resource
+from flask_cors import CORS
 from werkzeug.utils import secure_filename
 import torch
 import subprocess
@@ -17,6 +18,7 @@ if torch.cuda.is_available():
 else:
     print("Running on CPU mode")
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": ["http://localhost:*"]}})
 api = Api(app)
 UPLOAD_FOLDER = os.path.join(os.getcwd(),'uploads')
 if not os.path.exists(UPLOAD_FOLDER):
@@ -95,8 +97,31 @@ class QA(Resource):
         except Exception as e:
             print(f"Error processing qa response")
             return jsonify({'Error':str(e)})
+
+class GetLang(Resource):
+    def post(self):
+        try:
+            if 'video' not in request.files:
+                return jsonify({'Error':'Video not received'})
+            video_file = request.files['video']
+            filename = secure_filename(video_file.filename)
+            input_video_path = os.path.join(UPLOAD_FOLDER, filename)
+            video_file.save(input_video_path)
+            print(input_video_path)
+            response = getLangAnalysis(input_video_path)
+            return jsonify(response['original_text'])
+        except Exception as e:
+            print(f"Error processing lang analysis")
+            return jsonify({'Error':str(e)})
+
+
+
 api.add_resource(Video,'/upload')
 api.add_resource(TTS, '/tts') 
 api.add_resource(QA,'/qa')
+api.add_resource(GetLang,'/getlang')
 if __name__ == '__main__':
     app.run(debug=True,use_reloader=False,host="0.0.0.0", port=5000)
+
+
+
