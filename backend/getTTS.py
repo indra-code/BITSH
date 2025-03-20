@@ -1,14 +1,14 @@
 import re
 from pydub import AudioSegment
 import os
-from kokoro import KPipeline
-from IPython.display import display, Audio
 import soundfile as sf
-import torch
+import shutil
 
-pipeline = KPipeline(lang_code='a')
+def get_pipeline():
+    from kokoro import KPipeline
+    pipeline = KPipeline(lang_code='a')
+    return pipeline
 
-        
 def split_text_for_tts(text, max_words=29, max_chars=204):
     paragraphs = text.split('\n')
     chunks = []
@@ -44,8 +44,7 @@ def split_text_for_tts(text, max_words=29, max_chars=204):
     
     return chunks
 
-def process_text_to_speech(text, tts_function, output_dir="output_audio", final_output="combined_speech.wav"):
-    
+def process_text_to_speech(text, output_dir="output_audio", final_output="combined_speech.wav"):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     
@@ -59,11 +58,19 @@ def process_text_to_speech(text, tts_function, output_dir="output_audio", final_
         if word_count > 29 or char_count > 204:
             print(f"  WARNING: Chunk {i} exceeds limits ({word_count} words, {char_count} chars)")
     
+    pipeline = get_pipeline()
+    
     audio_files = []
     for i, chunk in enumerate(chunks):
         output_file = os.path.join(output_dir, f"chunk_{i:03d}.wav")
         
-        tts_function(chunk, output_file)
+        print(f"Converting to speech: {chunk}")
+        generator = pipeline(
+            chunk, voice='af_heart',
+            speed=1, split_pattern=r'\n+')
+        
+        for i, (gs, ps, audio) in enumerate(generator):
+            sf.write(output_file, audio, 24000)
         
         audio_files.append(output_file)
     
@@ -76,16 +83,21 @@ def process_text_to_speech(text, tts_function, output_dir="output_audio", final_
     
     return final_output
 
-def kokoroTTS(text, output_file):
-    print(f"Converting to speech: {text}")
-    generator = pipeline(
-    text, voice='af_heart', # <= change voice here
-    speed=1, split_pattern=r'\n+')
-    for i, (gs,ps,audio) in enumerate(generator):
-        sf.write(output_file,audio,24000)
-
-
-def getTTS(text):
-    final_audio = process_text_to_speech(text,kokoroTTS)
-    print(f"Speech generation complete! Final audio saved to: {final_audio}")
-
+def get_audio(text):
+    try:
+        import uuid
+        final_output = f"speech_{uuid.uuid4()}.wav"
+        
+        final_audio = process_text_to_speech(text, 
+                                            output_dir="output_audio", 
+                                            final_output=final_output)
+        
+        print(f"Speech generation complete! Final audio saved to: {final_audio}")
+        
+        if os.path.exists("output_audio"):
+            shutil.rmtree("output_audio")
+            
+        return os.path.abspath(final_audio)
+    except Exception as e:
+        print(f"Error in get_audio: {str(e)}")
+        raise
